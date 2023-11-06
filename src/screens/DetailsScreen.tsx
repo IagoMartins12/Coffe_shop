@@ -145,6 +145,7 @@ const DetailsScreen = ({navigation, route}: any) => {
             ))}
           </View>
         </View>
+
         <PaymentFooter
           price={price}
           buttonTitle="Adicionar ao carrinho"

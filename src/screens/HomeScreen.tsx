@@ -130,9 +130,7 @@ const HomeScreen = ({navigation}: any) => {
         {/* App Header */}
         <HeaderBar />
 
-        <Text style={styles.ScreenTitle}>
-          Find the best{'\n'}coffee for you
-        </Text>
+        <Text style={styles.ScreenTitle}>Encontre os {'\n'}melhores cafés</Text>
 
         {/* Search Input */}
 
@@ -153,7 +151,7 @@ const HomeScreen = ({navigation}: any) => {
             />
           </TouchableOpacity>
           <TextInput
-            placeholder="Find Your Coffee..."
+            placeholder="Encontre seu café..."
             value={searchText}
             onChangeText={text => {
               setSearchText(text);

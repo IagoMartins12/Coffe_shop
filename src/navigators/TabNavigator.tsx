@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     backgroundColor: COLORS.primaryBlackRGBA,
     borderTopWidth: 0,
-    elevation: 0,
     borderTopColor: 'transparent',
   },
   BlurViewStyles: {
