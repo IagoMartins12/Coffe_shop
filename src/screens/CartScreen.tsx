@@ -11,8 +11,8 @@ import {useStore} from '../store/store';
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 import {COLORS, SPACING} from '../theme/theme';
 import HeaderBar from '../components/HeaderBar';
-import PaymentFooter from '../components/PaymentFooter';
 import EmptyListAnimation from '../components/EmptyListAnimation';
+import PaymentFooter from '../components/PaymentFooter';
 import CartItem from '../components/CartItem';
 
 const CartScreen = ({navigation, route}: any) => {
@@ -50,7 +50,7 @@ const CartScreen = ({navigation, route}: any) => {
         <View
           style={[styles.ScrollViewInnerView, {marginBottom: tabBarHeight}]}>
           <View style={styles.ItemContainer}>
-            <HeaderBar title="Cart" />
+            <HeaderBar title="Carrinho" />
 
             {CartList.length == 0 ? (
               <EmptyListAnimation title={'Seu carrinho está vazio'} />
@@ -91,7 +91,7 @@ const CartScreen = ({navigation, route}: any) => {
             <PaymentFooter
               buttonPressHandler={buttonPressHandler}
               buttonTitle="Pay"
-              price={{price: CartPrice, currency: '$'}}
+              price={{price: CartPrice, currency: 'R$'}}
             />
           ) : (
             <></>

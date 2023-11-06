@@ -88,7 +88,7 @@ const DetailsScreen = ({navigation, route}: any) => {
         />
 
         <View style={styles.FooterInfoArea}>
-          <Text style={styles.InfoTitle}>Descrição</Text>
+          <Text style={styles.InfoTitle}>Description</Text>
           {fullDesc ? (
             <TouchableWithoutFeedback
               onPress={() => {
@@ -108,7 +108,7 @@ const DetailsScreen = ({navigation, route}: any) => {
               </Text>
             </TouchableWithoutFeedback>
           )}
-          <Text style={styles.InfoTitle}>Tamanho</Text>
+          <Text style={styles.InfoTitle}>Size</Text>
           <View style={styles.SizeOuterContainer}>
             {ItemOfIndex.prices.map((data: any) => (
               <TouchableOpacity
@@ -145,10 +145,9 @@ const DetailsScreen = ({navigation, route}: any) => {
             ))}
           </View>
         </View>
-
         <PaymentFooter
           price={price}
-          buttonTitle="Adicionar ao carrinho"
+          buttonTitle="Add to Cart"
           buttonPressHandler={() => {
             addToCarthandler({
               id: ItemOfIndex.id,

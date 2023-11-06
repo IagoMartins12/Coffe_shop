@@ -60,10 +60,10 @@ const OrderHistoryScreen = ({navigation}: any) => {
         <View
           style={[styles.ScrollViewInnerView, {marginBottom: tabBarHeight}]}>
           <View style={styles.ItemContainer}>
-            <HeaderBar title="Order History" />
+            <HeaderBar title="Historico" />
 
             {OrderHistoryList.length == 0 ? (
-              <EmptyListAnimation title={'No Order History'} />
+              <EmptyListAnimation title={'Nenhum pedido feito'} />
             ) : (
               <View style={styles.ListItemContainer}>
                 {OrderHistoryList.map((data: any, index: any) => (

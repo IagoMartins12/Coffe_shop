@@ -15,12 +15,12 @@ import {
   SPACING,
 } from '../theme/theme';
 import GradientBGIcon from '../components/GradientBGIcon';
+import PaymentMethod from '../components/PaymentMethod';
 import PaymentFooter from '../components/PaymentFooter';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomIcon from '../components/CustomIcon';
 import {useStore} from '../store/store';
 import PopUpAnimation from '../components/PopUpAnimation';
-import PaymentMethod from '../components/PaymentMethod';
 
 const PaymentList = [
   {

@@ -34,12 +34,12 @@ const getCategoriesFromData = (data: any) => {
     }
   }
   let categories = Object.keys(temp);
-  categories.unshift('All');
+  categories.unshift('Todos');
   return categories;
 };
 
 const getCoffeeList = (category: string, data: any) => {
-  if (category == 'All') {
+  if (category == 'Todos') {
     return data;
   } else {
     let coffeelist = data.filter((item: any) => item.name == category);
@@ -130,7 +130,9 @@ const HomeScreen = ({navigation}: any) => {
         {/* App Header */}
         <HeaderBar />
 
-        <Text style={styles.ScreenTitle}>Encontre os {'\n'}melhores cafés</Text>
+        <Text style={styles.ScreenTitle}>
+          Encontre os melhores {'\n'}cafés para você
+        </Text>
 
         {/* Search Input */}
 
@@ -225,7 +227,7 @@ const HomeScreen = ({navigation}: any) => {
           horizontal
           ListEmptyComponent={
             <View style={styles.EmptyListContainer}>
-              <Text style={styles.CategoryText}>No Coffee Available</Text>
+              <Text style={styles.CategoryText}>Sem cafés disponivel.</Text>
             </View>
           }
           showsHorizontalScrollIndicator={false}
