@@ -90,7 +90,7 @@ const CartScreen = ({navigation, route}: any) => {
           {CartList.length != 0 ? (
             <PaymentFooter
               buttonPressHandler={buttonPressHandler}
-              buttonTitle="Pay"
+              buttonTitle="Pagar"
               price={{price: CartPrice, currency: 'R$'}}
             />
           ) : (

@@ -24,7 +24,7 @@ import PopUpAnimation from '../components/PopUpAnimation';
 
 const PaymentList = [
   {
-    name: 'Wallet',
+    name: 'Carteira',
     icon: 'icon',
     isIcon: true,
   },
@@ -91,14 +91,14 @@ const PaymentScreen = ({navigation, route}: any) => {
               size={FONTSIZE.size_16}
             />
           </TouchableOpacity>
-          <Text style={styles.HeaderText}>Payments</Text>
+          <Text style={styles.HeaderText}>Pagamentos</Text>
           <View style={styles.EmptyView} />
         </View>
 
         <View style={styles.PaymentOptionsContainer}>
           <TouchableOpacity
             onPress={() => {
-              setPaymentMode('Credit Card');
+              setPaymentMode('Cartão de credito');
             }}>
             <View
               style={[
@@ -110,7 +110,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                       : COLORS.primaryGreyHex,
                 },
               ]}>
-              <Text style={styles.CreditCardTitle}>Credit Card</Text>
+              <Text style={styles.CreditCardTitle}>Cartão de credito</Text>
               <View style={styles.CreditCardBG}>
                 <LinearGradient
                   start={{x: 0, y: 0}}
@@ -138,7 +138,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                   <View style={styles.CreditCardRow}>
                     <View style={styles.CreditCardNameContainer}>
                       <Text style={styles.CreditCardNameSubitle}>
-                        Card Holder Name
+                        Nome do Titular
                       </Text>
                       <Text style={styles.CreditCardNameTitle}>
                         Robert Evans
@@ -146,7 +146,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                     </View>
                     <View style={styles.CreditCardDateContainer}>
                       <Text style={styles.CreditCardNameSubitle}>
-                        Expiry Date
+                        Data de expiração
                       </Text>
                       <Text style={styles.CreditCardNameTitle}>02/30</Text>
                     </View>
@@ -173,7 +173,7 @@ const PaymentScreen = ({navigation, route}: any) => {
       </ScrollView>
 
       <PaymentFooter
-        buttonTitle={`Pay with ${paymentMode}`}
+        buttonTitle={`Pagar com ${paymentMode}`}
         price={{price: route.params.amount, currency: '$'}}
         buttonPressHandler={buttonPressHandler}
       />
